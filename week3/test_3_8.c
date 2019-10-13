@@ -1,27 +1,19 @@
 #include <stdio.h>
-
 #include <string.h>
-int romanToArabic( char *roman );
-
-int main(int argc, char **argv)
+int romanToArabi(char *roman,int len);
+int main()
 {
-    /* printf("\n%s\n", argv[1]);printf("%d\n\n", argc); */
-    if( argc==2 )
-    {
-        printf("The roman numeral %s is equal to %d\n", argv[1], romanToArabic(argv[1]));
-    }
-    else
-    {
-        printf("ERROR: Incorrect usage, try e.g. %s XXI\n", argv[0]);
-    }
-
-return 0;
+    char arr[100] = {0};
+	printf("Please enter a Roman number (1-3999):");
+	scanf("%s", &arr);
+	int len = strlen(arr);
+	int s = romanToArabi(arr,len);
+	printf("%d\n", s);
+	return 0;
 }
-
-int romanToArabic(char *roman){
+int romanToArabi(char *roman,int len){
     int num = 0;
-    int i ;
-    int len = strlen(roman);
+	int i;
 
     for (i = 0; i < len; i++)
 		{
@@ -72,5 +64,7 @@ int romanToArabic(char *roman){
 			}
 		}
         return num;
-
 }
+
+
+
