@@ -19,15 +19,17 @@ int main(void){
         printf("Out of resource!\n");
         return 1;
     }
-
     printf("Please input a string(max length is %d):",MAXSL);
+
     /* get string */
     scanf("%s",pstring);
-    pstring[MAXSL-1]='\0'; /* string not array char */
+    pstring[MAXSL-1]='\0'; 
+    /* string not array char */
 
     upper(pstring);
     SpecialC(pstring);
     V4char(pstring);
+    
     free(pstring);
 
     return 0;
@@ -45,11 +47,10 @@ char upper(char *p1){
 char SpecialC(char *p2){
     int i,j=0;
     for(i=0;p2[i]!='\0';i++){
-        if(SpecialCL==p2[i]||p2[j]<'A'||p2[j]>'Z') continue; /*invalid letter */
+        if(SpecialCL==p2[i]||p2[j]<'A'||p2[j]>'Z'){}/*invalid letter */
         if(i!=0 && ('A'==p2[i]||'E'==p2[i]||'I'==p2[i]||'O'==p2[i]||'U'==p2[i]||'H'==p2[i]||'W'==p2[i]||'Y'==p2[i])){/* special letters:A, E, I, O, U, H, W, Y */
             p2[i]=SpecialCL;
-            continue;
-            }
+        }
         if(p2[i]==p2[i+1]) /* double letters? */
             p2[i+1]=SpecialCL;
     }

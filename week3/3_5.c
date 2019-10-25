@@ -7,6 +7,7 @@ int main(void)
 {
     int a[33],b[33];
     int i,t,r;
+    int *p_1;
     printf("Please input 1 if you want begin with randomised first line \nor input 2 with a single on in the central location ");
     scanf("%d",&t);
     
@@ -23,7 +24,14 @@ int main(void)
                 printf("%d ",a[i]);
             }
             printf("\nthis is next array: \n");
-            randomNextlist(b,a);
+            p_1 = a;
+            for ( i = 0; i < 31; i++)
+            {
+                randomNextlist(b,p_1);
+                p_1 = b;
+            }
+            
+            /* randomNextlist(b,a); */
 
             break;
 
@@ -42,7 +50,14 @@ int main(void)
                 printf("%d ",a[i]);
             }
             printf("\nthis is next array: \n");
-            randomNextlist(b,a);
+            p_1 = a;
+            for ( i = 0; i < 31; i++)
+            {
+                randomNextlist(b,p_1);
+                p_1 = b;
+            }
+            
+           /*  randomNextlist(b,a); */
             break;
         
         default:
@@ -91,4 +106,7 @@ void randomNextlist(int *b,int *a){
     {
         printf("%d ",b[x]);
     }
+    printf("\n");
+
 }
+

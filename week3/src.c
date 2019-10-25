@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <assert.h>
+#include <assert.h> 
 int romanToArabic( char *roman );
 void test(void);
 int main(int argc, char **argv)
@@ -19,6 +19,7 @@ int main(int argc, char **argv)
 
 return 0;
 }
+
 void test(void){
 	assert(romanToArabic("I")==1);
 	assert(romanToArabic("V")==5);
@@ -34,14 +35,14 @@ void test(void){
 	assert(romanToArabic("IX")==9);
 	assert(romanToArabic("IV")==4);
 
-}
+} 
 
 int romanToArabic(char *roman){
     int num = 0;
     int i ;
     int len = strlen(roman);
 
-    for (i = 0; i < len; i++)
+    for (i = len-1; i >= 0; i--)
 		{
 			switch (*(roman+i)){
 			case 'M':
