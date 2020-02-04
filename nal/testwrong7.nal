@@ -1,0 +1,9 @@
+{
+    IFGREATER ( %C , 9 ) {
+      ABORT
+    }
+
+    IFEQUAL ( %C , 9 ) 
+      JUMP 4
+    }
+}

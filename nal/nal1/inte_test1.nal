@@ -1,0 +1,47 @@
+{
+    $A = "Hello111"
+    $AB = #Uryyb111#
+    $ABC = $A
+    
+    %LE = 6
+    %YG = 1
+    %SZ = %LE
+
+    %SZ = #ASDFD#
+    %SZ = %LEN
+    %SZ = "ASDFD"
+    %SZ = $A
+
+    $A = $AN
+    $A = %LEN
+    $A = 99
+    
+    PRINT $ABC
+    PRINT $AB
+
+    PRINT %LE
+    PRINT %YG
+    PRINT %SZ
+
+    PRINT "Hello World! From test1"
+    PRINT #ABCDEFGHIJKLMNOPQRSTUVWXYZ#
+    PRINT #abcdefghijklmnopqrstuvwxyz#
+    PRINT #0123456789#
+
+    PRINT %W
+    PRINT $W
+
+    RND ( %R )
+    RND ( %LE )
+
+    INC ( %LE )
+    INC ( %I )
+
+    INNUM ( %I )
+    INNUM ( %LE )
+
+    IN2STR ( $STR1 , $STR2 )
+
+    JUMP 0
+
+}

@@ -1,0 +1,30 @@
+{
+    $VA = "MOVE"
+    %B  = 5
+
+    IFEQUAL ( $VA , %B ) 
+    {
+        PRINT "OK1!!" 
+    }
+    IFEQUAL( "6" , 0 ) 
+    {
+        PRINT "OK2!!"
+    }
+    IFEQUAL( #6# , 0 ) 
+    {
+        PRINT "OK3!!"
+    }
+    IFEQUAL( #6# , %B ) 
+    {
+        PRINT "OK4!!"
+    }
+    IFEQUAL( "6" , %B ) 
+    {
+        PRINT "OK5!!"
+    }
+    IFEQUAL ( $VA , 0 ) 
+    {
+        PRINT "OK6!!" 
+    }
+
+}

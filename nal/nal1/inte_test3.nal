@@ -1,0 +1,6 @@
+{
+    $C = "IN inte_test3 file"
+    PRINT $C
+    %TEST = 0 
+    FILE "inte_test5.nal"
+}

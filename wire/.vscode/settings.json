@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "*.sql": "csharp",
-        "neillncurses.h": "c"
-    },
-    "C_Cpp.errorSquiggles": "Enabled"
-}

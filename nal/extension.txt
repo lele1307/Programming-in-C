@@ -1,0 +1,26 @@
+1.Structure
+nal.mk
+    extension
+    {
+        exten.c
+        exten.h
+        texten.c
+    }
+    It can be compiled and tested by nal.mk
+    make -f nal.mk exten testextension
+
+2.New function
+    ①LOOP
+        LOOP ( NUM ) {
+        }
+        It can loop codes in this function.
+
+    ②BREAK
+        Just stopping and jump out of original function.
+
+3.Description
+In order to reduce duplication of code, I added this new content to the interp part, and only made a brief modification. 
+Its function execution is similar to the previous specified function, except that the compilation function is improved, 
+and there is no significant improvement in execution efficiency.
+
+

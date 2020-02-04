@@ -1,0 +1,8 @@
+{
+    PRINT %ASa
+    PRINT %a
+    PRINT $a
+    PRINT SAKD"
+    PRINT "SAKD
+    PRINTN SAKD#   
+}

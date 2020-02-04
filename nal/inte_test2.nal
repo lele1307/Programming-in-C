@@ -1,0 +1,29 @@
+{
+    $VA = "MOVE"
+    %B  = 5
+
+    IFEQUAL ( $VA , "MOVE" ) 
+    {
+        IFGREATER ( %B , 0 ) 
+        {
+            PRINT "OK1!!" 
+        }
+    }
+
+    IFEQUAL ( $VA , "MOVE" ) 
+    {
+        IFGREATER ( %B , 6 ) 
+        {
+
+        }
+        PRINT "OK2!!"
+    }
+
+    IFEQUAL ( $VA , "MOVE1" )
+    {
+
+    }
+    PRINT "OK3!!"
+
+    FILE "inte_test3.nal"
+}

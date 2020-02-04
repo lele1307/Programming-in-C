@@ -1,0 +1,4 @@
+{
+    RND ( %AC )
+    INC ( %AB )
+    INNUM ( %GUESS )

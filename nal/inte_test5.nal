@@ -1,0 +1,4 @@
+{
+    PRINT "IN inte_test5 file"
+    ABORT
+}

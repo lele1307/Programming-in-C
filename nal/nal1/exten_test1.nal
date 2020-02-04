@@ -1,0 +1,11 @@
+{
+
+   %C = 1
+   LOOP ( 5 ) {
+      INC ( %C )
+      PRINT %C
+      BREAK
+      PRINT %C
+   }
+
+}

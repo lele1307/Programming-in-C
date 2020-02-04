@@ -4,13 +4,13 @@
 #include <assert.h>
 
 #define HIGHT 370122
-#define WIDTH 20 
+#define WIDTH 32 
 
 void Inputfile(char file[HIGHT][WIDTH]);
 void Search(char file[HIGHT],char *SearchWord);
 
 int main(int argc, char **argv){
-    char file[HIGHT][WIDTH];
+    static char file[HIGHT][WIDTH];
     if( argc==2 ){
         printf("Your test word is %s \n", argv[1]);
         Inputfile(file);
@@ -22,8 +22,9 @@ int main(int argc, char **argv){
 }
 
 void Inputfile(char file[HIGHT][WIDTH]){
-    int i,j;
-    char fileg[HIGHT];
+    int i,j; /*WhichLine*/
+    int CurrentIndex=0;  
+    char fileg[32];
     FILE *fpRead;
     /* Read file name IN */
     if((fpRead=fopen("eng_370k_shuffle.txt","r"))==NULL){
@@ -32,27 +33,23 @@ void Inputfile(char file[HIGHT][WIDTH]){
     }
 
     /* Add to array */
-        while(fgets(fileg,HIGHT,fpRead)!=NULL){
-                /* printf("%s",file); */
-            strcpy(file,fileg);
-            fputs(fileg,stdout);
-        } 
-
-/*     for(i=0;i<HIGHT;i++){
-        for(j=0;j<WIDTH;j++){
-            printf("%c",file[i][j]);
+    for (i=0; i<HIGHT-1; i++){
+        if (CurrentIndex==i){
+            fgets(fileg,32,fpRead);
+            /* printf("%s", fileg); */
+            stpcpy(file[i],fileg);
+            CurrentIndex++;  
         }
-    } */
-
-    
+    }
+        printf("%s",file[0]); 
 
     fclose(fpRead);
 }
 
-void Search(char file[HIGHT],char *SearchWord){
+/* void Search(char file[HIGHT],char *SearchWord){
     int i;
     printf("\nInput word: %s\n",SearchWord);
     
         printf("%s",file[0]); 
     
-}
+} */

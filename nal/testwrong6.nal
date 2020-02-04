@@ -1,0 +1,4 @@
+{
+    IN2STR ( %BBB , $CCC )
+    IN2STR ( $BBB , %CCC )
+}

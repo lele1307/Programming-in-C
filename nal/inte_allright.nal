@@ -1,0 +1,34 @@
+{
+    FILE "test1.nal"
+
+    RND ( %AC )
+    INC ( %AC )
+    INNUM ( %GUESS )
+
+    %D = %AC
+    %D = 99
+    %D = 99.00
+    $ASF = $OAS
+    $OAS = "Hello World! From test1"
+    $OAS = #ABCDEFGHIJKLMNOPQRSTUVWXYZ#
+    
+    IFGREATER ( %C , 9 ) {
+      ABORT
+    }
+
+    IFEQUAL ( %C , 9 ) {
+      JUMP 4
+    }
+
+    IN2STR ( $BBB , $CCC )
+
+    PRINT "Hello World! From test1"
+    PRINT "I'm thinking of a number (0-99).\nCan you guess it?\n"
+    PRINT #ABCDEFGHIJKLMNOPQRSTUVWXYZ#
+    PRINT #abcdefghijklmnopqrstuvwxyz#
+    PRINT #0123456789#
+    PRINT %D
+    PRINT $ASA
+    PRINT 123
+
+}

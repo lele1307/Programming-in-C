@@ -1,0 +1,5 @@
+{
+    RND ( %Ac )
+    INC ( AB )
+    RND ( $AC )
+}
