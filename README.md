@@ -1,2 +1,2 @@
 # Programming-in-C
-Programming in C--learning improving
+Programming in C coursework
